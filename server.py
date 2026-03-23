@@ -6,7 +6,7 @@ app = FastAPI()
 # ── YOUR DATABASE CREDENTIALS ─────────────────────────────────────────────
 SUPABASE_URL = "https://fisiwpdpvalyvvmixbap.supabase.co"
 # REPLACE THE TEXT BELOW WITH YOUR ACTUAL SUPABASE PUBLISHABLE KEY
-SUPABASE_KEY = "sb_publishable_y-gLi7LBisf3qViqg_ccow_GJLTgpPh"
+SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZpc2l3cGRwdmFseXZ2bWl4YmFwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQyODAwNDMsImV4cCI6MjA4OTg1NjA0M30.Iw9AuJLv929sQ8BmyWZI3-W5ar0x3x56Pf7F-c_7KjQ"
 
 supabase = create_client(SUPABASE_URL, SUPABASE_KEY)
 
