@@ -64,19 +64,22 @@ with st.sidebar:
 # ==========================================
 # 3. LIVE DATA VISUALIZATION
 # ==========================================
+# ==========================================
+# 3. LIVE DATA VISUALIZATION
+# ==========================================
 st.header("Step 2: Real-Time Participation Scores")
 chart_placeholder = st.empty()
 
 # This loop runs forever while the app is open
 while True:
     try:
-        # Fetch data from your 'live_transcripts' table
-        res = supabase.table("live_transcripts").select("student_name").execute()
+        # 1. CHANGED 'student_name' TO 'speaker'
+        res = supabase.table("live_transcripts").select("speaker").execute()
         df = pd.DataFrame(res.data)
         
         if not df.empty:
-            # Count how many times each student has spoken
-            score_data = df['student_name'].value_counts().reset_index()
+            # 2. CHANGED 'student_name' TO 'speaker'
+            score_data = df['speaker'].value_counts().reset_index()
             score_data.columns = ['Student', 'Participation Points']
             
             # Update the chart in the placeholder
